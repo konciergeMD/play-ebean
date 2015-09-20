@@ -93,7 +93,7 @@ public class EbeanDynamicEvolutions extends DynamicEvolutions {
      */
     public static String generateEvolutionScript(EbeanServer server, ServerConfig config) {
         DdlGenerator ddl = new DdlGenerator();
-        ddl.setup((SpiEbeanServer)server, config);
+        ddl.setup((SpiEbeanServer) server, config);
         String ups = ddl.generateCreateDdl();
         String downs = ddl.generateDropDdl();
 
